@@ -1,0 +1,68 @@
+/*elementselector*/
+p {
+text-align: left;
+}
+/* ID SELECTOR*/
+
+#css{
+    text-align: center;
+}
+
+/* CLASS SELECTOR */ 
+
+.class {
+    text-align: right;
+    color: yellow;
+
+}
+/* UNIVERSAL SELECTOR */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* GROUPING SELECTOR */
+/* IT IS ALSO  A PART OF SIMPLE SELECTOR AND IT SELECT ALL THE ELEMENT AS SAME STYLE */
+/* if we have s different type of selector but in it havng same element then we use
+this selector for make a code easy ( p, .class, css ) as written as same */
+
+
+/* COMBINATOR SELECTOR */
+/* 1. DESENDEND SELECTOR */
+div p {
+    background-color: blue;
+    color: yellow;
+}
+div > p {
+    background-color: brown;
+}
+/* ADJACENT SIBLING SELECTOR */
+
+div + p {
+    background-color:  yellow;
+}
+
+/* GENERAL SIBLING SELECTOR */
+
+ div ~p {
+    background-color: red;
+}
+
+/* PSEUDO CLASS SELECTOR */
+
+div ~p:hover {
+    background-color: yellow;
+}
+
+/*PSEUDO ELEMENT  SELECTOR */
+
+div ~ p::first-letter{
+    color: red
+    ;
+}
+
+/* ATTRIBUTE SELECTOR */
+
+
+a[target] {
+    background-color: green;
+}
