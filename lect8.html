@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./test.css" />
+    <title>Page Title</title>
+  </head>
+  <body>
+    <main>
+      <h1>My Page Title</h1>
+      <p>Nice caption goes here</p>
+
+      <article class="first_article">
+        <h2>List of amazing fruits</h2>
+        <p>Must eat fruits</p>
+        
+        <div class="wrapper-1">
+          <ul class="apple-list">
+            <li class="apple">Apples</li>
+            <li class="orange">Orange</li>
+            <li class="avocado">Avocado</li>
+            <li class="grapes">
+              Grapes
+              <ul>
+                <li class="type-1">Moon drops</li>
+                <li>Sultana</li>
+                <li>Concord</li>
+                <li>Crimson Seedless</li>
+              </ul>
+            </li>
+            <li class="banana">Bananas</li>
+          </ul>
+        </div>
+      </article>
+
+      <button class="btn-1">Read full list</button>
+    </main>
+    <script>
+      const headings = document.querySelectorAll("h2");
+
+      const firstHeading = headings[0];
+      console.log(firstHeading); // <h2>List of amazing fruits</h2>
+
+      const secondHeading = headings[1];
+      console.log(secondHeading); // This line will throw an error because there is no second <h2> element
+
+      document.querySelector(".orange").innerHTML = "Oranges";
+
+      const appleList = document.querySelector(".apple-list");
+
+      console.log(appleList.children);
+      console.log(appleList.childNodes);
+      console.log(appleList.firstChild);
+      console.log(appleList.lastChild);
+
+      console.log(appleList.parentElement); // <div class="wrapper-1">..</div>
+      console.log(appleList.parentNode); // <div class="wrapper-1">..</div>
+
+      const btn1 = document.querySelector(".btn-1");
+      console.log(btn1.closest("main")); // <main>...</main>
+      console.log(btn1); // <button class="btn-1">Read full List</button>
+
+      const orange = document.querySelector(".orange");
+
+      const apple = orange.previousElementSibling;
+      const avocado = orange.nextElementSibling;
+
+      console.log(apple); // <li class="apple">Apples</li>
+      console.log(avocado); // <li class="avocado">Avocado</li>
+    </script>
+  </body>
+</html>
