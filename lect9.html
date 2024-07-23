@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayDate()">show date</button>
+    <div id="chng"></div>
+    <input type="text" onchange="uppercase()" name="" id="firstName">Enter the first name
+    <div id="mouse" onmouseover="Over()" onmouseout="Out() " onmouseleave="leave()" style="background-color: red;">Hello i am ouse over</div>
+    <script>
+        const displayDate = () =>{
+            document.getElementById("chng").innerHTML=new Date()
+        }
+        function uppercase()
+        {
+            const x=document.getElementById("firstName");
+            x.value = x.value.toUpperCase()
+        }
+        function Over()
+        {
+            document.getElementById("mouse").innerHTML="mouse over is on"
+            document.getElementById("mouse").style.background="yellow"
+        }
+        function Out()
+        {
+            document.getElementById("mouse").innerHTML="mouse is leaving"
+              document.getElementById("mouse").style.background="green"
+        }
+       
+        
+    </script>
+</body>
+</html>
